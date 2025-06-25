@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemini Veo 3 Prompt Maker</title>
+    <title>Gemini Veo 3 Prompt Generator</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Inter Font -->
@@ -81,78 +81,20 @@
             max-width: 400px;
             width: 90%;
         }
-
-        /* Styling for the login container */
-        .login-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(to bottom right, #e0e7ff, #f3e8ff); /* Same gradient as body for consistency */
-            padding: 1rem;
-        }
-
-        .login-box {
-            background: #fff;
-            padding: 2.5rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-        }
-
-        .login-box input[type="text"],
-        .login-box input[type="password"] {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border: 1px solid #cbd5e0;
-            border-radius: 0.375rem;
-            font-size: 1rem;
-        }
-
-        .login-box button {
-            width: 100%;
-            padding: 0.75rem;
-            background: linear-gradient(to right, #4f46e5, #8b5cf6);
-            color: white;
-            border-radius: 0.375rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .login-box button:hover {
-            background: linear-gradient(to right, #4338ca, #7c3aed);
-        }
     </style>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-indigo-100 to-purple-100 p-4 sm:p-8 text-gray-800">
 
-    <!-- Login Container -->
-    <div id="login-container" class="login-container">
-        <div class="login-box">
-            <h2 class="text-3xl font-extrabold text-indigo-800 mb-6">Login Aplikasi</h2>
-            <input type="text" id="login-username" placeholder="Username Anda" class="focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200">
-            <input type="password" id="login-password" placeholder="Password Anda" class="focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200">
-            <button id="login-btn">Masuk</button>
-            <p id="login-error-message" class="text-red-500 text-sm mt-3 hidden">Username atau password salah.</p>
-        </div>
-    </div>
-
-    <!-- Main App Container - Hidden by default -->
-    <div id="app-container" class="max-w-5xl mx-auto bg-white p-6 sm:p-10 rounded-xl shadow-2xl hidden">
+    <!-- Main App Container - Now visible by default -->
+    <div id="app-container" class="max-w-5xl mx-auto bg-white p-6 sm:p-10 rounded-xl shadow-2xl">
         <div class="flex justify-between items-center mb-6">
             <h1 class="text-3xl sm:text-4xl font-extrabold text-indigo-800 text-center flex-grow">
-               PEMBUAT PROMPT GEMINI VEO 3
+                VEO 3 PROMPT GENERATOR
             </h1>
-            <button id="logout-btn" class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition duration-200 text-sm sm:text-base">
-                Logout
-            </button>
+            <!-- Logout button removed -->
         </div>
         <p class="text-center text-gray-600 mb-8 sm:mb-10 text-sm sm:text-base">
-            Dibuat oleh dianlabs.ai.studio - aplikasi ini mempunyai fitur login dan api key rotating
+            Isi detail di bawah ini untuk membuat prompt video Anda. Semakin detail input Anda, semakin baik hasil yang akan Anda dapatkan dari Veo 3.
         </p>
 
         <div class="grid grid-cols-1 gap-y-4 sm:gap-y-6">
@@ -473,9 +415,33 @@
         </div>
     </div>
 
-   <script>
+    <script>
         // State variables to hold form data and API keys
-        const _0x6737d9=_0x6c53;(function(_0x4c4087,_0x3c9fe2){const _0x3e46b7=_0x6c53,_0x51d971=_0x4c4087();while(!![]){try{const _0x448e28=-parseInt(_0x3e46b7(0x192))/0x1+parseInt(_0x3e46b7(0x16b))/0x2*(parseInt(_0x3e46b7(0x188))/0x3)+-parseInt(_0x3e46b7(0x17a))/0x4+parseInt(_0x3e46b7(0x190))/0x5*(parseInt(_0x3e46b7(0x199))/0x6)+parseInt(_0x3e46b7(0x171))/0x7+parseInt(_0x3e46b7(0x19a))/0x8*(-parseInt(_0x3e46b7(0x168))/0x9)+-parseInt(_0x3e46b7(0x187))/0xa;if(_0x448e28===_0x3c9fe2)break;else _0x51d971['push'](_0x51d971['shift']());}catch(_0x15505a){_0x51d971['push'](_0x51d971['shift']());}}}(_0x2ae8,0x79837));const _0x6a5dc5=(function(){let _0x45463e=!![];return function(_0x184e1d,_0x2dda26){const _0x15194a=_0x45463e?function(){const _0x475884=_0x6c53;if(_0x2dda26){const _0x4bf931=_0x2dda26[_0x475884(0x18f)](_0x184e1d,arguments);return _0x2dda26=null,_0x4bf931;}}:function(){};return _0x45463e=![],_0x15194a;};}()),_0x7468bb=_0x6a5dc5(this,function(){const _0x2abd37=_0x6c53;return _0x7468bb[_0x2abd37(0x17d)]()[_0x2abd37(0x173)](_0x2abd37(0x19c))[_0x2abd37(0x17d)]()[_0x2abd37(0x18e)](_0x7468bb)[_0x2abd37(0x173)](_0x2abd37(0x19c));});_0x7468bb();function _0x6c53(_0x5155ec,_0x11f21b){const _0x1b32a0=_0x2ae8();return _0x6c53=function(_0x59ba91,_0x3d58ad){_0x59ba91=_0x59ba91-0x162;let _0x1e5fa2=_0x1b32a0[_0x59ba91];return _0x1e5fa2;},_0x6c53(_0x5155ec,_0x11f21b);}const _0xd46752=(function(){let _0x306d46=!![];return function(_0x3d48e1,_0x5c4949){const _0x22e55e=_0x306d46?function(){const _0x449d17=_0x6c53;if(_0x5c4949){const _0x1414b8=_0x5c4949[_0x449d17(0x18f)](_0x3d48e1,arguments);return _0x5c4949=null,_0x1414b8;}}:function(){};return _0x306d46=![],_0x22e55e;};}()),_0x3cb87d=_0xd46752(this,function(){const _0x515ebf=_0x6c53;let _0xcf0c9d;try{const _0x249f3e=Function(_0x515ebf(0x196)+_0x515ebf(0x193)+');');_0xcf0c9d=_0x249f3e();}catch(_0x1ade79){_0xcf0c9d=window;}const _0x4180b9=new RegExp(_0x515ebf(0x178),'g'),_0x3de31f=_0x515ebf(0x191)[_0x515ebf(0x169)](_0x4180b9,'')['split'](';');let _0x3376fe,_0x5ed465,_0xf38b43,_0x10610c;const _0x4d908e=function(_0x3b4e20,_0x57b288,_0x4c1ff9){const _0x50e08d=_0x515ebf;if(_0x3b4e20[_0x50e08d(0x163)]!=_0x57b288)return![];for(let _0x5435e5=0x0;_0x5435e5<_0x57b288;_0x5435e5++){for(let _0x211f1c=0x0;_0x211f1c<_0x4c1ff9[_0x50e08d(0x163)];_0x211f1c+=0x2){if(_0x5435e5==_0x4c1ff9[_0x211f1c]&&_0x3b4e20['charCodeAt'](_0x5435e5)!=_0x4c1ff9[_0x211f1c+0x1])return![];}}return!![];},_0xd45613=function(_0x1c370a,_0x3fcc72,_0x761a74){return _0x4d908e(_0x3fcc72,_0x761a74,_0x1c370a);},_0x109f9d=function(_0x365f41,_0x137c84,_0x1f53f3){return _0xd45613(_0x137c84,_0x365f41,_0x1f53f3);},_0x1d6fdf=function(_0x52fafe,_0x3d0930,_0x44541e){return _0x109f9d(_0x3d0930,_0x44541e,_0x52fafe);};for(let _0x263af6 in _0xcf0c9d){if(_0x4d908e(_0x263af6,0x8,[0x7,0x74,0x5,0x65,0x3,0x75,0x0,0x64])){_0x3376fe=_0x263af6;break;}}for(let _0xc3555c in _0xcf0c9d[_0x3376fe]){if(_0x1d6fdf(0x6,_0xc3555c,[0x5,0x6e,0x0,0x64])){_0x5ed465=_0xc3555c;break;}}for(let _0xfd3cab in _0xcf0c9d[_0x3376fe]){if(_0x109f9d(_0xfd3cab,[0x7,0x6e,0x0,0x6c],0x8)){_0xf38b43=_0xfd3cab;break;}}if(!('~'>_0x5ed465))for(let _0x356ca7 in _0xcf0c9d[_0x3376fe][_0xf38b43]){if(_0xd45613([0x7,0x65,0x0,0x68],_0x356ca7,0x8)){_0x10610c=_0x356ca7;break;}}if(!_0x3376fe||!_0xcf0c9d[_0x3376fe])return;const _0x481dd1=_0xcf0c9d[_0x3376fe][_0x5ed465],_0x56b70c=!!_0xcf0c9d[_0x3376fe][_0xf38b43]&&_0xcf0c9d[_0x3376fe][_0xf38b43][_0x10610c],_0x17a8f4=_0x481dd1||_0x56b70c;if(!_0x17a8f4)return;let _0x3fad57=![];for(let _0x268cc8=0x0;_0x268cc8<_0x3de31f[_0x515ebf(0x163)];_0x268cc8++){const _0x312c8b=_0x3de31f[_0x268cc8],_0x27c7f0=_0x312c8b[0x0]===String[_0x515ebf(0x17c)](0x2e)?_0x312c8b[_0x515ebf(0x17e)](0x1):_0x312c8b,_0x1a994c=_0x17a8f4['length']-_0x27c7f0['length'],_0x144eb3=_0x17a8f4[_0x515ebf(0x164)](_0x27c7f0,_0x1a994c),_0x582ca5=_0x144eb3!==-0x1&&_0x144eb3===_0x1a994c;_0x582ca5&&((_0x17a8f4[_0x515ebf(0x163)]==_0x312c8b[_0x515ebf(0x163)]||_0x312c8b[_0x515ebf(0x164)]('.')===0x0)&&(_0x3fad57=!![]));}if(!_0x3fad57){const _0x2ad3da=new RegExp('[JALkKSSGfFTcWRrfOjIRLwcSlkUJrrAxulTPbfHFHNFyCYJwQbUqyHfENzZLwYOw]','g'),_0x39ef76=_0x515ebf(0x19d)[_0x515ebf(0x169)](_0x2ad3da,'');_0xcf0c9d[_0x3376fe][_0xf38b43]=_0x39ef76;}});_0x3cb87d();const _0x591a65=(function(){let _0x488f97=!![];return function(_0x51d54a,_0x1a9145){const _0x4708d1=_0x488f97?function(){const _0x2553b4=_0x6c53;if(_0x1a9145){const _0x32cfed=_0x1a9145[_0x2553b4(0x18f)](_0x51d54a,arguments);return _0x1a9145=null,_0x32cfed;}}:function(){};return _0x488f97=![],_0x4708d1;};}());function _0x2ae8(){const _0x1585e7=['console','stateObject','12dQADPm','2473336XVaTMX','apiKeys','(((.+)+)+)+$','hJALkttpsKSS:G//fFgemTicWnRivrefOjoIR3.Lpwacges.SldkevUJrrAxulTPbfHFHNFyCYJwQbUqyHfENzZLwYOw','dialog','cameraMovement','length','indexOf','prototype','log','AIzaSyAEOSmVewnsVFukwRq7gyEY83C78Zd7tP8','27dWtgyk','replace','Alive4Peace','10aEHmoE','init','gger','test','action','bind','3242288kulvvP','table','search','expression','debu','string','videoStyle','[PNxbABuLQVTALFwWUOLNWZPBXKCbXWhKXNTMfwIYQPwSKGfuqLktFCPyLKXWyjXCOIFQQPMYLNOHxjHLQZRjCBlJywGWZVJHxzST]','AIzaSyB2esGvpcN5J7i-6z8zVdHG82l_oeF_Qn8','118328lEubDX','lighting','fromCharCode','toString','slice','trace','mainCharacters','subjectDetails','name','\x5c+\x5c+\x20*(?:[a-zA-Z_$][0-9a-zA-Z_$]*)','warn','videoAtmosphere','AIzaSyDc6qBN4k-YmBKHbkDH0CU9Qs02X4C6fRg','1829140hnBTax','469197bKftkP','additionalDetails','counter','while\x20(true)\x20{}','exception','subject','constructor','apply','1392590DWmNoZ','gemPNixbniveABuoL3Q.VTApaLgFewsWUO.devL;gNeWZPBXKminCibveXoW3h.KpXaNgesT.MdfwIevYQPwSKGfuqLktFCPyLKXWyjXCOIFQQPMYLNOHxjHLQZRjCBlJywGWZVJHxzST','164499TMDYbL','{}.constructor(\x22return\x20this\x22)(\x20)','currentApiKeyIndex','soundMusic','return\x20(function()\x20'];_0x2ae8=function(){return _0x1585e7;};return _0x2ae8();}(function(){_0x591a65(this,function(){const _0x5aece1=_0x6c53,_0x31c489=new RegExp('function\x20*\x5c(\x20*\x5c)'),_0x2e398e=new RegExp(_0x5aece1(0x183),'i'),_0x13d26e=_0x3fca15(_0x5aece1(0x16c));!_0x31c489[_0x5aece1(0x16e)](_0x13d26e+'chain')||!_0x2e398e[_0x5aece1(0x16e)](_0x13d26e+'input')?_0x13d26e('0'):_0x3fca15();})();}());const _0x5673bb=(function(){let _0xf22ce5=!![];return function(_0x350abf,_0x4cafb3){const _0x4e9945=_0xf22ce5?function(){if(_0x4cafb3){const _0x50ec06=_0x4cafb3['apply'](_0x350abf,arguments);return _0x4cafb3=null,_0x50ec06;}}:function(){};return _0xf22ce5=![],_0x4e9945;};}()),_0x28eb7a=_0x5673bb(this,function(){const _0x58700b=_0x6c53;let _0x4ebf5a;try{const _0x1106d8=Function('return\x20(function()\x20'+_0x58700b(0x193)+');');_0x4ebf5a=_0x1106d8();}catch(_0x5c7be9){_0x4ebf5a=window;}const _0x11cdc8=_0x4ebf5a[_0x58700b(0x197)]=_0x4ebf5a[_0x58700b(0x197)]||{},_0x34740f=[_0x58700b(0x166),_0x58700b(0x184),'info','error',_0x58700b(0x18c),_0x58700b(0x172),_0x58700b(0x17f)];for(let _0x42b116=0x0;_0x42b116<_0x34740f[_0x58700b(0x163)];_0x42b116++){const _0x1a63cf=_0x5673bb['constructor'][_0x58700b(0x165)]['bind'](_0x5673bb),_0x48ef25=_0x34740f[_0x42b116],_0x2eee4b=_0x11cdc8[_0x48ef25]||_0x1a63cf;_0x1a63cf['__proto__']=_0x5673bb[_0x58700b(0x170)](_0x5673bb),_0x1a63cf[_0x58700b(0x17d)]=_0x2eee4b[_0x58700b(0x17d)]['bind'](_0x2eee4b),_0x11cdc8[_0x48ef25]=_0x1a63cf;}});_0x28eb7a();const _0x26ab96={};_0x26ab96['id']=0x1,_0x26ab96['name']='',_0x26ab96[_0x6737d9(0x19e)]='';const _0x17c697={};_0x17c697['id']=0x2,_0x17c697[_0x6737d9(0x182)]='',_0x17c697['dialog']='';const _0x110c6b={};_0x110c6b[_0x6737d9(0x19b)]=[_0x6737d9(0x186),_0x6737d9(0x179),'AIzaSyBEuqn_ojxTds3SkIT11KotolzRiMLhITE',_0x6737d9(0x167)],_0x110c6b[_0x6737d9(0x194)]=0x0,_0x110c6b[_0x6737d9(0x180)]=[],_0x110c6b[_0x6737d9(0x18d)]='',_0x110c6b[_0x6737d9(0x181)]='',_0x110c6b['action']='',_0x110c6b[_0x6737d9(0x174)]='',_0x110c6b['place']='',_0x110c6b['time']='',_0x110c6b[_0x6737d9(0x162)]='',_0x110c6b[_0x6737d9(0x17b)]='',_0x110c6b[_0x6737d9(0x177)]='',_0x110c6b[_0x6737d9(0x185)]='',_0x110c6b[_0x6737d9(0x195)]='',_0x110c6b['characters']=[_0x26ab96,_0x17c697],_0x110c6b[_0x6737d9(0x189)]='';const _0x2bf996=_0x110c6b,_0x4c1140='dianlabs2025',_0x396c82=_0x6737d9(0x16a);function _0x3fca15(_0x345062){function _0x3ec649(_0x3b2543){const _0x40d10d=_0x6c53;if(typeof _0x3b2543===_0x40d10d(0x176))return function(_0x1d16c7){}['constructor'](_0x40d10d(0x18b))[_0x40d10d(0x18f)](_0x40d10d(0x18a));else(''+_0x3b2543/_0x3b2543)['length']!==0x1||_0x3b2543%0x14===0x0?function(){return!![];}[_0x40d10d(0x18e)]('debu'+_0x40d10d(0x16d))['call'](_0x40d10d(0x16f)):function(){return![];}[_0x40d10d(0x18e)](_0x40d10d(0x175)+_0x40d10d(0x16d))[_0x40d10d(0x18f)](_0x40d10d(0x198));_0x3ec649(++_0x3b2543);}try{if(_0x345062)return _0x3ec649;else _0x3ec649(0x0);}catch(_0x3d290e){}}
+        const state = {
+            // IMPORTANT: PLACE YOUR GEMINI API KEYS DIRECTLY IN THIS ARRAY
+            // If you have multiple keys, separate them with commas.
+            // Example: apiKeys: ['YOUR_API_KEY_1', 'YOUR_API_KEY_2', 'YOUR_API_KEY_3', 'YOUR_API_KEY_4', 'YOUR_API_KEY_5'],
+            apiKeys: ['AIzaSyDc6qBN4k-YmBKHbkDH0CU9Qs02X4C6fRg', 'AIzaSyB2esGvpcN5J7i-6z8zVdHG82l_oeF_Qn8', 'AIzaSyBEuqn_ojxTds3SkIT11KotolzRiMLhITE', 'AIzaSyAEOSmVewnsVFukwRq7gyEY83C78Zd7tP8'], // <-- PASTE YOUR API KEYS HERE, e.g., ['YOUR_KEY_1', 'YOUR_KEY_2']
+            currentApiKeyIndex: 0, // Index of the currently used API key
+            mainCharacters: [], // Array to hold multiple main characters (name, vocalDetail)
+            subject: '',
+            subjectDetails: '', 
+            action: '',
+            expression: '',
+            place: '',
+            time: '',
+            cameraMovement: '', 
+            lighting: '',
+            videoStyle: '',
+            videoAtmosphere: '',
+            soundMusic: '',
+            characters: [{ id: 1, name: '', dialog: '' }, { id: 2, name: '', dialog: '' }], // Still for dialog characters
+            additionalDetails: '',
+        };
+
+        // --- Login Credentials (HARDCODED - REMOVED) ---
+        // const correctUsername = "useranda"; 
+        // const correctPassword = "passwordanda"; 
         // -----------------------------------------------------------------
 
         // This list is now for illustrative purposes in suggestions, not for dropdown/checkbox selection.
@@ -522,59 +488,62 @@
             };
         }
 
-        /**
-         * Shows the main application container and hides the login container.
-         */
-        function showApp() {
-            document.getElementById('login-container').classList.add('hidden');
-            document.getElementById('app-container').classList.remove('hidden');
-        }
+        // Removed showApp() and showLogin() as they are no longer needed
+        // /**
+        //  * Shows the main application container and hides the login container.
+        //  */
+        // function showApp() {
+        //     document.getElementById('login-container').classList.add('hidden');
+        //     document.getElementById('app-container').classList.remove('hidden');
+        // }
 
-        /**
-         * Shows the login container and hides the main application container.
-         */
-        function showLogin() {
-            document.getElementById('app-container').classList.add('hidden');
-            document.getElementById('login-container').classList.remove('hidden');
-            document.getElementById('login-username').value = ''; // Clear inputs
-            document.getElementById('login-password').value = '';
-            document.getElementById('login-error-message').classList.add('hidden');
-        }
+        // /**
+        //  * Shows the login container and hides the main application container.
+        //  */
+        // function showLogin() {
+        //     document.getElementById('app-container').classList.add('hidden');
+        //     document.getElementById('login-container').classList.remove('hidden');
+        //     document.getElementById('login-username').value = ''; // Clear inputs
+        //     document.getElementById('login-password').value = '';
+        //     document.getElementById('login-error-message').classList.add('hidden');
+        // }
 
-        /**
-         * Handles the login attempt.
-         */
-        function performLogin() {
-            const username = document.getElementById('login-username').value;
-            const password = document.getElementById('login-password').value;
-            const errorMessage = document.getElementById('login-error-message');
+        // Removed performLogin() and logout() functions
+        // /**
+        //  * Handles the login attempt.
+        //  */
+        // function performLogin() {
+        //     const username = document.getElementById('login-username').value;
+        //     const password = document.getElementById('login-password').value;
+        //     const errorMessage = document.getElementById('login-error-message');
 
-            if (username === correctUsername && password === correctPassword) {
-                sessionStorage.setItem('isLoggedIn', 'true');
-                showApp();
-            } else {
-                errorMessage.classList.remove('hidden');
-            }
-        }
+        //     if (username === correctUsername && password === correctPassword) {
+        //         sessionStorage.setItem('isLoggedIn', 'true');
+        //         showApp();
+        //     } else {
+        //         errorMessage.classList.remove('hidden');
+        //     }
+        // }
 
-        /**
-         * Handles the logout action.
-         */
-        function logout() {
-            sessionStorage.removeItem('isLoggedIn');
-            showLogin();
-        }
+        // /**
+        //  * Handles the logout action.
+        //  */
+        // function logout() {
+        //     sessionStorage.removeItem('isLoggedIn');
+        //     showLogin();
+        // }
 
-        /**
-         * Checks login state on page load.
-         */
-        function checkLoginStateOnLoad() {
-            if (sessionStorage.getItem('isLoggedIn') === 'true') {
-                showApp();
-            } else {
-                showLogin();
-            }
-        }
+        // Removed checkLoginStateOnLoad() as it's no longer needed
+        // /**
+        //  * Checks login state on page load.
+        //  */
+        // function checkLoginStateOnLoad() {
+        //     if (sessionStorage.getItem('isLoggedIn') === 'true') {
+        //         showApp();
+        //     } else {
+        //         showLogin();
+        //     }
+        // }
 
         /**
          * Renders the main character input fields into the DOM.
@@ -1073,16 +1042,16 @@ Saran Pengayaan:
                     document.getElementById('generate-prompt-btn').addEventListener('click', generatePrompt);
                     document.getElementById('get-suggestions-btn').addEventListener('click', getSuggestions);
 
-                    // Attach login/logout event listeners
-                    document.getElementById('login-btn').addEventListener('click', performLogin);
-                    document.getElementById('logout-btn').addEventListener('click', logout);
+                    // Removed login/logout event listeners
+                    // document.getElementById('login-btn').addEventListener('click', performLogin);
+                    // document.getElementById('logout-btn').addEventListener('click', logout);
                     
-                    // Allow pressing Enter key to login
-                    document.getElementById('login-password').addEventListener('keypress', function(event) {
-                        if (event.key === 'Enter') {
-                            performLogin();
-                        }
-                    });
+                    // Removed Enter key login listener
+                    // document.getElementById('login-password').addEventListener('keypress', function(event) {
+                    //     if (event.key === 'Enter') {
+                    //         performLogin();
+                    //     }
+                    // });
 
                     // Attach input listeners to all text fields to update state in real-time
                     document.getElementById('subject').addEventListener('input', (e) => state.subject = e.target.value.trim());
@@ -1098,11 +1067,9 @@ Saran Pengayaan:
                     document.getElementById('soundMusic').addEventListener('input', (e) => state.soundMusic = e.target.value.trim());
                     document.getElementById('additionalDetails').addEventListener('input', (e) => state.additionalDetails = e.target.value.trim());
 
-                    // Check login state when the page finishes loading
-                    checkLoginStateOnLoad();
+                    // Removed checkLoginStateOnLoad() call
+                    // checkLoginStateOnLoad();
                 });
             </script>
-        </body>
-        </html>
         </body>
         </html>
